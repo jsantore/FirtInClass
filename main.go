@@ -1,9 +1,16 @@
 package main
 
+import "fmt"
+
 type ClassInfo struct {
 	name       string
 	instructor string
 	numCredits int
+}
+
+func main() {
+	allLines := getFile()
+	fmt.Println(allLines)
 }
 
 //// TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
