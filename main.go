@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -20,8 +21,10 @@ func main() {
 			word = clearString(word)
 			count := counter[word]
 			counter[word] = count + 1
-
 		}
+	}
+	for word, count := range counter {
+		fmt.Printf("%s: %d\n", word, count)
 	}
 
 }
