@@ -8,7 +8,7 @@ import (
 )
 
 func getFile() []string {
-	contents, err := os.ReadFile("pg2600.txt")
+	contents, err := os.ReadFile("warPeace.txt")
 	if err != nil {
 		fmt.Println("File reading error", err)
 		return nil

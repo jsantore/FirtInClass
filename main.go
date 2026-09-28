@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"strings"
+)
 
 type ClassInfo struct {
 	name       string
@@ -9,8 +11,17 @@ type ClassInfo struct {
 }
 
 func main() {
+
 	allLines := getFile()
-	fmt.Println(allLines)
+	counter := make(map[string]int)
+	for _, line := range allLines {
+		words := strings.Split(line, " ")
+		for _, word := range words {
+			word = clearString(word)
+			count, ok := counter[word]
+		}
+	}
+
 }
 
 //// TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
