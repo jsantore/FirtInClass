@@ -18,7 +18,9 @@ func main() {
 		words := strings.Split(line, " ")
 		for _, word := range words {
 			word = clearString(word)
-			count, ok := counter[word]
+			count := counter[word]
+			counter[word] = count + 1
+
 		}
 	}
 
